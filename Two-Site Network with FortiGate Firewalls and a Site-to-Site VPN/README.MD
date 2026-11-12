@@ -1,5 +1,5 @@
 # Two-Site Network with FortiGate Firewalls and a Site-to-Site VPN
-##Scenario
+## Scenario
 
 A small company has a headquarters and a branch office. HQ has users and servers on separate VLANs, and the branch has a small user network. Both sites reach the internet through an ISP, and you need to connect them securely, control what traffic is allowed, and keep routing dynamic so the network can grow.
 
