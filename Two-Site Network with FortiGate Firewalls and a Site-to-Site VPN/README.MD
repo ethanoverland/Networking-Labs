@@ -1,11 +1,11 @@
 # Two-Site Network with FortiGate Firewalls and a Site-to-Site VPN
 
 ## 1. Network Foundation
-### * IP Scheme
+### - IP Scheme
 
-### * VLANs
+### - VLANs
 
-### * Basic Routes
+### - Basic Routes
 
 ## 2. FortiGate FW Policy
 
