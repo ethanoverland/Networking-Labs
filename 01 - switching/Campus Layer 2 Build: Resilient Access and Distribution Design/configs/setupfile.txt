@@ -1,0 +1,42 @@
+
+# Create VLANs to segment Layer 2 traffic. (REQ-01)
+vlan 10
+name Staff
+vlan 20
+name Servers
+vlan 30
+name Guest
+vlan 40
+name Voice
+vlan 50
+name Management
+exit
+
+# Set trunk mode, set native VLAN to unused VLAN, set allowed VLANs, and stop trunk negotiations. (REQ-10)
+sw tr en dot
+sw mo tr
+sw tr nat vl 999
+sw tr all vl 10-50,999
+sw noneg
+
+# Setup SSH access only (REQ-11)
+ip domain name overland.work
+end
+crypto key gen rsa mod 3072
+conf t
+line vty 0 4
+transport input ssh 
+
+# Designate Spanning tree root primary and secondary (REQ-03)
+spanning-tree vlan 10 root primary
+spanning-tree vlan 20 root primary
+spanning-tree vlan 30 root primary
+spanning-tree vlan 40 root primary
+spanning-tree vlan 50 root primary
+
+spanning-tree vlan 10 root secondary
+spanning-tree vlan 20 root secondary
+spanning-tree vlan 30 root secondary
+spanning-tree vlan 40 root secondary
+spanning-tree vlan 50 root secondary
+
