@@ -40,3 +40,5 @@ spanning-tree vlan 30 root secondary
 spanning-tree vlan 40 root secondary
 spanning-tree vlan 50 root secondary
 
+# Setup err-disable recovery on a 3 min interval. (REQ-12)
+errdisable recovery interval 180

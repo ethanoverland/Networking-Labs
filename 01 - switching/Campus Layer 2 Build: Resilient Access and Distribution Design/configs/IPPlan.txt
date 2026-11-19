@@ -1,0 +1,10 @@
+Staff - VLAN 10
+    Subnet: 10.0.10.0/24
+Server - VLAN 20
+    Subnet: 10.0.20.0/24
+Guest - VLAN 30
+    Subnet: 10.0.30.0/24
+Voice - VLAN 40
+    Subnet: 10.0.40.0/24
+Management - VLAN 50
+    Subnet: 10.0.50.0/24
